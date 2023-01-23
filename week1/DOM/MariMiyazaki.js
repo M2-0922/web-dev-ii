@@ -45,6 +45,13 @@ let autoDeletePara = document.createElement("p");
 autoDeletePara.innerHTML = "Dissappearing in 3 seconds :(";
 document.body.appendChild(autoDeletePara);
 
-setTimeout(function() {
+let fn = function() {
     autoDeletePara.parentNode.removeChild(autoDeletePara);
-}, 3000);
+};
+let tm = 3000;
+
+setTimeout(fn, tm);
+
+// setTimeout(function() {
+//     autoDeletePara.parentNode.removeChild(autoDeletePara);
+// }, 3000);
