@@ -1,6 +1,7 @@
 ###### Easy:
 
 Q: How do you select an element with the id "my-element" using JavaScript?
+
 Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
 
 ```js
