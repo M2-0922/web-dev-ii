@@ -65,16 +65,19 @@ document.body.append(element)
 Q: How do you change the text of an element with the class "my-class" using JavaScript?
 
 A:
+```js
 document.getElementsByClassName("my-class")[0].innerHTML = "new";
-
+```
 ###### Hard:
 
 Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
 
 A:
+```js
 const element = document.createElement('p');
 document.body.append(element)
 element.innerHTML = "mustafa";
  setTimeout(() => {
      element.remove();
   }, 3000);
+```
