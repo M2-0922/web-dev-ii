@@ -1,4 +1,4 @@
-`filter()` is a built-in JavaScript function that allows you to filter an array based on a given condition and return a new array with the elements that pass the condition. The `filter()` function takes a callback function as its first argument, which is applied to each element of the array, and an optional second argument, which is the this value for the callback function. The callback function should return a boolean value, indicating whether the element should be included in the new array (true) or not (false).
+filter()` is a built-in JavaScript function that allows you to filter an array based on a given condition and return a new array with the elements that pass the condition. The `filter()` function takes a callback function as its first argument, which is applied to each element of the array, and an optional second argument, which is the this value for the callback function. The callback function should return a boolean value, indicating whether the element should be included in the new array (true) or not (false).
 
 Here's an example of how to use `filter()` to find all even numbers in an array:
 
