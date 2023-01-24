@@ -1,6 +1,7 @@
 ###### Easy:
 
 Q: How do you select an element with the id "my-element" using JavaScript?
+
 A: Using document.getElementById() method.
    Answer is `document.getElementById('my-element')`.
 ***
@@ -77,8 +78,8 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
 ###### Medium:
 
 Q: How do you change the text of an element with the class "my-class" using JavaScript?
-A: using `document.getElementsByClassName` method then `innerHTML` with specifying index of the element.
 
+A: using `document.getElementsByClassName` method then `innerHTML` with specifying index of the element.
 ```js
 let myClass = document.getElementsByClassName('my-class');
 myClass[0].innerHTML = 'Done :)';
@@ -88,6 +89,7 @@ myClass[0].innerHTML = 'Done :)';
 ###### Hard:
 
 Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
+
 A: First, I created a way to add new elements with `innerHTMl` and `appendChild`. Then I set the remove function with `removeChild`. Finally I put these inside `addEventLister` that fires by click.
 ```html
 <button id="flashButton">_(:O 」∠) I'm sleepy...</button>
