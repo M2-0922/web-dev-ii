@@ -2,11 +2,20 @@
 
 Q: How do you select an element with the id "my-element" using JavaScript?
 
+```js
+document.querySelector("#my-element");
+```
+
 Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
 
 ```js
-<button id="myButton">Click me</button>
+<button id="myButton">Click me</button>;
+const btn = document.querySelector("#myButton");
+btn.addEventListener("click", () => {
+  btn.textContent = "change!";
+});
 ```
+
 Q: Create a list of items in HTML and use JavaScript to add a new item to the list when a button is clicked.
 
 ```js
@@ -16,7 +25,17 @@ Q: Create a list of items in HTML and use JavaScript to add a new item to the li
   <li>Item 3</li>
 </ul>
 <button id="addButton">Add item</button>
+
+const item =document.querySelector("#myList");
+const btn =document.querySelector("#addButton");
+btn.addEventListener('click',()=>{
+  let li = document.createElement('li');
+  i.innerHTML = 'New Item';
+  item.appendChild(li);
+})
+
 ```
+
 Q: Create a form in HTML with a text input and a submit button. Use JavaScript to display the value of the text input when the form is submitted.
 
 ```js
@@ -24,13 +43,28 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
   <input type="text" id="myInput">
   <input type="submit" value="Submit">
 </form>
+
+const text= document.querySelector('#myInput');
+const subBtn= document.querySelector('#Submit');
+
+subBtn.addEventListener('click',()=>{
+  let showText=text.value;
+  document.write(showText);
+})
 ```
 
 ###### Medium:
 
 Q: How do you change the text of an element with the class "my-class" using JavaScript?
 
+```js
+document.querySelector(".my-class").textContent = "change!!";
+```
+
 ###### Hard:
 
 Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
 
+```js
+
+```
