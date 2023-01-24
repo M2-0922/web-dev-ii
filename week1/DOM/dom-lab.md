@@ -90,7 +90,11 @@ myClass[0].innerHTML = 'Done :)';
 
 Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
 
-A: First, I created a way to add new elements with `innerHTMl` and `appendChild`. Then I set the remove function with `removeChild`. Finally I put these inside `addEventLister` that fires by click.
+A: First, I created a way to add new elements with `innerHTMl` and `appendChild`.
+
+Then I set the remove function with `removeChild`.
+
+ Finally I put these inside `addEventLister` that fires by click.
 ```html
 <button id="flashButton">_(:O 」∠) I'm sleepy...</button>
 <div id="flashList"></div>
@@ -108,7 +112,7 @@ A: First, I created a way to add new elements with `innerHTMl` and `appendChild`
   function wakeUp() {
     flashList.removeChild(flashList.firstElementChild);
   }
-<script/>
+</script>
 ```
 
 ***
