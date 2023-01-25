@@ -1,0 +1,60 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    /* background-color: #fdeff2; */
+    height: 500vh;
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    font-weight: bold;
+    background-color: #f5e9e1;
+}
+
+p {
+    visibility: hidden;
+}
+
+.mouseover-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bird {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.replay {
+    display: flex;
+    justify-content: center;
+}
+
+#feed {
+    position: fixed;
+    bottom: 3rem;
+    margin-left: 3rem;
+    /* left: 3rem; */
+    font-size: 3rem;
+    color: #66ada8;
+}
+
+.waiting {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+#waiting-bird {
+    width: 5rem;
+    height: 7rem;
+    object-fit: cover;
+}
