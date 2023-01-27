@@ -29,7 +29,7 @@ const words = ['hello', 'world', 'goodbye'];
 const allValidWords = words.every(function(word) {
   return word.length > 3 && word.indexOf('e') !== -1;
 });
-console.log(allValidWords); // true
+console.log(allValidWords); // false
 ```
 
 In this example, the `every()` method is used to check if all elements in the words array are valid `words` according to a custom validation function. The function passed to `every()` takes in each element of the array and returns `true` if the element has more than 3 characters and contains the letter 'e', and false otherwise. If all elements in the array return `true` when passed through this function, `allValidWords` will be `true`.
