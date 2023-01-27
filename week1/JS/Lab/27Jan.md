@@ -6,10 +6,30 @@ let objectArr = [
   { name: "Jane", age: 30 },
   { name: "Jack", age: 35 },
   { name: "Jill", age: 40 },
-  { name: "Joe", age: 45 }
+  { name: "Joe", age: 45 },
 ];
-let mixedArr = [1, "hello", false, "world", 3, "this", true, "is", { name: "Adam", age: 21 }, "a", 6, "mixed", 7, "array"];
+let mixedArr = [
+  1,
+  "hello",
+  false,
+  "world",
+  3,
+  "this",
+  true,
+  "is",
+  { name: "Adam", age: 21 },
+  "a",
+  6,
+  "mixed",
+  7,
+  "array",
+];
 
+// - Use the `reduce` function to sum all elements in an array.
+let sumAll = numberArr.reduce((acc, cur) => {
+  return acc + cur;
+}, 0);
+console.log(sumAll);
 ```
 
 - Use the `find` function to locate the first element in an array that satisfies a certain condition.
