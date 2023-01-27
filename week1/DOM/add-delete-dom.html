@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+           window.addEventListener("load", () => {
+                let addButton = document.getElementById("addButton");
+                let deleteButton = document.getElementById("deleteButton");
+                
+                addButton.addEventListener("click", addItems);
+
+                deleteButton.addEventListener("click", deleteItems);
+
+                function addItems(){
+                    let list = document.getElementById("myList");
+                    let listLength = document.getElementsByTagName("li").length;
+                    let newListItem = document.createElement("li");
+                    newListItem.innerHTML = "Item " + (listLength + 1);
+                    list.appendChild(newListItem);
+                }
+
+                function deleteItems(){
+                    let list = document.getElementById("myList");
+                    list.removeChild(list.lastChild);
+                }
+
+           })
+        </script>
+    </head>
+    <body>
+        <button id="deleteButton">Delete item</button>
+        <button id="addButton">Add item</button>
+        <ul id="myList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </body>
+</html>

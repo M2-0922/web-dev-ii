@@ -1,11 +1,6 @@
 ###### Easy:
 
 Q: How do you select an element with the id "my-element" using JavaScript?
-
-```js
-document.querySelector("#my-element");
-```
-
 Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
 
 ```js
@@ -24,6 +19,7 @@ Q: Create a list of items in HTML and use JavaScript to add a new item to the li
   <li>Item 2</li>
   <li>Item 3</li>
 </ul>
+
 <button id="addButton">Add item</button>
 
 const item =document.querySelector("#myList");
@@ -43,28 +39,12 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
   <input type="text" id="myInput">
   <input type="submit" value="Submit">
 </form>
-
-const text= document.querySelector('#myInput');
-const subBtn= document.querySelector('#Submit');
-
-subBtn.addEventListener('click',()=>{
-  let showText=text.value;
-  document.write(showText);
-})
 ```
 
 ###### Medium:
 
 Q: How do you change the text of an element with the class "my-class" using JavaScript?
 
-```js
-document.querySelector(".my-class").textContent = "change!!";
-```
-
 ###### Hard:
 
 Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
-
-```js
-
-```
