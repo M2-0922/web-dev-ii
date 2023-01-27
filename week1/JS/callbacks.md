@@ -83,6 +83,8 @@ const evenNumbers = numbers.filter(function(number) {
 console.log(evenNumbers);
 ```
 
+
+
 The `.filter` method takes a callback function as an argument and applies it to each element of an array. In this example, the callback function filters out the even numbers in the numbers array.
 
 ###### Using `.reduce` method
