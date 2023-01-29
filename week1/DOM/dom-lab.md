@@ -38,7 +38,26 @@ Q: Create a list of items in HTML and use JavaScript to add a new item to the li
   <li>Item 2</li>
   <li>Item 3</li>
 </ul>
+
 <button id="addButton">Add item</button>
+```
+
+Answer:
+
+```js
+let list = document.getElementById("myList");
+let button = document.getElementById("addButton");
+let counter = 4;
+
+button.addEventListener("click", () => {
+  let newListItem = document.createElement("li");
+  newListItem.innerHTML = "Item " + counter;
+  list.appendChild(newListItem);
+  counter++;
+});
+```
+
+Q: Create a form in HTML with a text input and a submit button. Use JavaScript to display the value of the text input when the form is submitted.
 
 <script>
   let myList = document.getElementById('myList');
@@ -74,6 +93,27 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
 </script>
 ```
 ***
+
+Answer:
+
+```js
+let form = document.getElementById("myForm");
+let textInput = document.getElementById("myInput");
+
+let container = document.createElement("div");
+document.body.appendChild(container);
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let p = document.createElement("p");
+
+  p.innerHTML = textInput.value;
+  container.appendChild(p);
+
+  textInput.value = "";
+});
+```
 
 ###### Medium:
 
