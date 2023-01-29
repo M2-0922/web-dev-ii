@@ -18,7 +18,7 @@ let mixedArr = [1, "hello", false, "world", 3, "this", true, "is", { name: "Adam
 let num = numberArr.find(n => n > 10 && n < 20 );	
 let str = stringArr.find(word => word.length = 4);
 let obj = objectArr.find(person => person.name.includes("Ji"));
-let mix  = mixedArr.find(mix => typeof mix == 'object');
+let mix = mixedArr.find(mix => typeof mix == 'object');
 
 // num = 11
 // str = hello
@@ -32,7 +32,7 @@ let mix  = mixedArr.find(mix => typeof mix == 'object');
 let num = numberArr.some(n => n < 5);	
 let str = stringArr.some(word => word.length > 10);
 let obj = objectArr.some(person => person.name.includes("oe"));
-let mix  = mixedArr.some(mix => typeof mix == 'object');
+let mix = mixedArr.some(mix => typeof mix == 'object');
 
 // num = true
 // str = false
@@ -46,7 +46,7 @@ let mix  = mixedArr.some(mix => typeof mix == 'object');
 let num = numberArr.every(n => n < 5);
 let str = stringArr.every(word => word.length > 60);
 let obj = objectArr.every(person => person.name.includes("x"));
-let mix  = mixedArr.every(mix => typeof mix == 'number');
+let mix = mixedArr.every(mix => typeof mix == 'number');
 
 // num = false
 // str = false
@@ -60,9 +60,7 @@ let mix  = mixedArr.every(mix => typeof mix == 'number');
 let num = numberArr.reduce((total, num) => total += String(num));
 let str = stringArr.reduce((total, str) => total += str);
 let obj = objectArr.reduce((previousValue, currentValue) => previousValue + currentValue.name + currentValue.age,"");
-let mix = mixedArr.reduce((total, str) => 
-        total += typeof str === 'object' ? str.name + str.age : str 
-);
+let mix = mixedArr.reduce((total, str) => total += typeof str === 'object' ? str.name + str.age : str );
 
 // num = 115223425
 // str = helloworldthisisastring
@@ -76,7 +74,7 @@ let mix = mixedArr.reduce((total, str) =>
 let num = numberArr.find(n => n > 50 );	
 let str = stringArr.find(word => word.includes("r"));
 let obj = objectArr.find(person => person.name.includes("J") && person.age > 30);
-let mix  = mixedArr.find(mix => typeof mix == 'string');
+let mix = mixedArr.find(mix => typeof mix == 'string');
 
 //num = 52
 //str = world
@@ -90,7 +88,7 @@ let mix  = mixedArr.find(mix => typeof mix == 'string');
 let num = numberArr.some(n => n < 5);	
 let str = stringArr.some(word => word === "a");
 let obj = objectArr.some(person => person.name === "Joe");
-let mix  = mixedArr.some(mix => typeof mix == 'number' && mix > 5);
+let mix = mixedArr.some(mix => typeof mix == 'number' && mix > 5);
 
 // num = true
 // str = true
@@ -104,7 +102,7 @@ let mix  = mixedArr.some(mix => typeof mix == 'number' && mix > 5);
 let num = numberArr.every(n => n < 10);
 let str = stringArr.every(word => word.includes("s"));
 let obj = objectArr.every(person => person.age >= 25);
-let mix  = mixedArr.every(mix => typeof mix == 'object');
+let mix = mixedArr.every(mix => typeof mix == 'object');
 
 // num = false
 // str = false
@@ -117,9 +115,9 @@ let mix  = mixedArr.every(mix => typeof mix == 'object');
 ```js
 let num = numberArr.reduce((total, num) => total += num);
 let str = stringArr.reduce((total, str, count) => {
-    typeof total === 'string' && typeof str === 'string'? count += count : count += 0
-    return count + 1
-});
+		  typeof total === 'string' && typeof str === 'string'? count += count : count += 0
+		  return count + 1
+		  });
 let obj = objectArr.reduce((previousValue, currentValue) => previousValue + currentValue.age,0);
 let mix = mixedArr.reduce((total, str) => total += typeof str === 'object' ? 1 : 1 );
 
@@ -135,7 +133,7 @@ let mix = mixedArr.reduce((total, str) => total += typeof str === 'object' ? 1 :
 let num = numberArr.find(n => n > 50 );	
 let str = stringArr.find(word => word.length > 5);
 let obj = objectArr.find((person) => person.age > 40);
-let mix  = mixedArr.find(mix => typeof mix == 'number' && mix > 5);
+let mix = mixedArr.find(mix => typeof mix == 'number' && mix > 5);
 
 // num = 52
 // str = string
@@ -149,7 +147,7 @@ let mix  = mixedArr.find(mix => typeof mix == 'number' && mix > 5);
 let num = numberArr.some(n => n % 2 == 0);	
 let str = stringArr.some(word => typeof word === 'number' ? word % 2 == 0 : false);
 let obj = objectArr.some(person => person.age % 2 == 0);
-let mix  = mixedArr.some(mix => typeof mix == 'number' ? mix % 2 == 0 : false);
+let mix = mixedArr.some(mix => typeof mix == 'number' ? mix % 2 == 0 : false);
 
 // num = true
 // str = false
@@ -162,9 +160,8 @@ let mix  = mixedArr.some(mix => typeof mix == 'number' ? mix % 2 == 0 : false);
 ```js
 let num = numberArr.every((preNum, corNum) => preNum != corNum);
 let str = stringArr.every((preWord, corWord) => preWord !== corWord);
-let obj = objectArr.every((prePerson, corPerson) => 
-	prePerson.name !== corPerson.name && prePerson.age !== corPerson.age);
-let mix  = mixedArr.every((preMix, corMix) => preMix !== corMix);
+let obj = objectArr.every((prePerson, corPerson) => prePerson.name !== corPerson.name && prePerson.age !== corPerson.age);
+let mix = mixedArr.every((preMix, corMix) => preMix !== corMix);
 
 // num = true
 // str = true
@@ -192,7 +189,7 @@ let mix = mixedArr.reduce((preMix, corMix) => typeof corMix == 'number' ? preMix
 let num = numberArr.find(num => num == true);	
 let str = stringArr.find(word => word == true);
 let obj = objectArr.find(person => person == true);
-let mix  = mixedArr.find(mix => mix == true);
+let mix = mixedArr.find(mix => mix == true);
 
 // num = undefined
 // str = undefined
@@ -206,7 +203,7 @@ let mix  = mixedArr.find(mix => mix == true);
 let num = numberArr.some(num => num === null);	
 let str = stringArr.some(word => word === null);
 let obj = objectArr.some(person => person === null);
-let mix  = mixedArr.some(mix => mix === null);
+let mix = mixedArr.some(mix => mix === null);
 
 // num = false
 // str = false
@@ -220,7 +217,7 @@ let mix  = mixedArr.some(mix => mix === null);
 let num = numberArr.every((num, index, arr) => typeof num === typeof arr[0]);	
 let str = stringArr.every((word, index, arr) => typeof word === typeof arr[0]);
 let obj = objectArr.every((person, index, arr) => typeof person === typeof arr[0]);
-let mix  = mixedArr.every((mix, index, arr) => typeof mix === typeof arr[0]);
+let mix = mixedArr.every((mix, index, arr) => typeof mix === typeof arr[0]);
 
 // num = true
 // str = true
@@ -234,7 +231,7 @@ let mix  = mixedArr.every((mix, index, arr) => typeof mix === typeof arr[0]);
 let num = numberArr.reduce((preNum, corNum) => Math.max(preNum, corNum));
 let str = stringArr.reduce((preWord, corWord) => typeof corWord == 'number' ? Math.max(preWord, corWord) : preWord, 0);
 let obj = objectArr.reduce((prePerson, corPerson) => Math.max(prePerson, corPerson.age), 0);
-let mix  = mixedArr.reduce((preMix, corMix) => typeof corMix == 'number' ? Math.max(preMix, corMix) : preMix, 0);
+let mix = mixedArr.reduce((preMix, corMix) => typeof corMix == 'number' ? Math.max(preMix, corMix) : preMix, 0);
 
 // num = 52
 // str = 0
@@ -248,7 +245,7 @@ let mix  = mixedArr.reduce((preMix, corMix) => typeof corMix == 'number' ? Math.
 let num = numberArr.find(num => String(num).includes("1"));	
 let str = stringArr.find(word => word.includes("s"));
 let obj = objectArr.find(person => person.name.includes("ck"));
-let mix  = mixedArr.find(mix => typeof mix == 'string' ? mix.includes("ay") : false);
+let mix = mixedArr.find(mix => typeof mix == 'string' ? mix.includes("ay") : false);
 
 // num = 11
 // str = this
@@ -262,7 +259,7 @@ let mix  = mixedArr.find(mix => typeof mix == 'string' ? mix.includes("ay") : fa
 let num = numberArr.some(num => typeof num === 'object');	
 let str = stringArr.some(word => typeof word === 'object');
 let obj = objectArr.some(person => typeof person === 'object');
-let mix  = mixedArr.some(mix => typeof mix === 'object');
+let mix = mixedArr.some(mix => typeof mix === 'object');
 
 // num = false
 // str = false
@@ -276,7 +273,7 @@ let mix  = mixedArr.some(mix => typeof mix === 'object');
 let num = numberArr.every(num => Number.isInteger(num));	
 let str = stringArr.every(word => Number.isInteger(word));
 let obj = objectArr.every(person => Number.isInteger(person.name) && Number.isInteger(person.age));
-let mix  = mixedArr.every(mix => Number.isInteger(mix));
+let mix = mixedArr.every(mix => Number.isInteger(mix));
 
 // num = true
 // str = false
