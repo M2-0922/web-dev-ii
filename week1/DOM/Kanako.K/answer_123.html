@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+<!-- // ###### Easy:
+
+// Q: How do you select an element with the id "my-element" using JavaScript?
+// Answer: -->
+<script>
+  document.querySelector("#my-element");
+</script>
+  
+
+<!-- Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
+Answer: -->
+<button id="theButton">Button</button>
+
+<script>
+  const theButton = document.getElementById("theButton");
+  theButton.addEventListener("click", function() {
+    theButton.innerHTML = "You clicked!"
+  })
+</script>
+<br>
+<hr>
+
+
+<!-- Q: Create a list of items in HTML and use JavaScript to add a new item to the list when a button is clicked.
+Answer:  -->
+<ul id="items">
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+</ul>
+<button id="addButton">Add item</button>
+
+<script>
+  const items = document.getElementById("items");
+  const addButton = document.getElementById("addButton");
+  addButton.addEventListener("click", function(){
+    const newLi = document.createElement("li");
+    let itemNum = document.querySelectorAll("li").length + 1;
+    newLi.textContent = "item" + itemNum;
+    items.appendChild(newLi);
+  })
+</script>
+<br>
+<hr>
+
+
+<!-- Q: Create a form in HTML with a text input and a submit button. Use JavaScript to display the value of the text input when the form is submitted.
+Answer:  -->
+<input type="text" id="myInput" placeholder="type here">
+<input type="button" value="Submit" id="submitButton">
+<p id="checkMyInput"></p>
+
+<script>
+  function buttonClick(){
+    checkMyInput.innerHTML = myInput.value;
+  }
+
+  const myInput = document.getElementById('myInput');
+  const checkMyInput = document.getElementById('checkMyInput');
+  const submitButton = document.getElementById('submitButton');
+  submitButton.addEventListener('click', buttonClick);
+</script>
+<br>
+<hr>
+
+
+<!-- ###### Medium:
+
+Q: How do you change the text of an element with the class "my-class" using JavaScript?
+Answer: -->
+<div class="my-class">before</div>
+
+<script>
+  const myClass = document.getElementsByClassName("my-class")[0];
+  myClass.innerHTML = "after"
+</script>
+<br>
+<hr>
+
+
+<!-- ###### Hard:
+
+Q: How do you add a new element to the DOM and then remove it after 3 seconds using JavaScript?
+Answer: -->
+<script>
+  const newElement = document.createElement("h2");
+  newElement.innerHTML = "Disappears in 3 second";
+  document.body.appendChild(newElement);
+
+  setTimeout(function() {
+    document.body.removeChild(newElement);
+  }, 3000);
+</script>
+
+
+</body>
+</html>
+
