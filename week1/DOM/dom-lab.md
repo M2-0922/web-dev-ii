@@ -1,39 +1,33 @@
 ###### Easy:
 
 Q: How do you select an element with the id "my-element" using JavaScript?
-
-Answer: 
-```js
-document.getElementById("my-element");
-
-document.querySelector("#my-element");
-```
-
 Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
 
 ```js
 <button id="myButton">Click me</button>
 ```
+
 Answer:
 
 ```js
-
 // first way (event listener way)
 let button = document.getElementById("myButton");
 
-button.addEventListener("click", function(){
-  button.innerHTML = "Clicked!"
+button.addEventListener("click", function () {
+  button.innerHTML = "Clicked!";
 });
 
 // second way, function way
 
-function clickAndChange(){
+function clickAndChange() {
   let button = document.getElementById("myButton");
-  button.innerHTML = "Clicked!"
+  button.innerHTML = "Clicked!";
 }
 
 // html
-<button onClick="clickAndChange()" id="myButton">Click me</button>
+<button onClick="clickAndChange()" id="myButton">
+  Click me
+</button>;
 ```
 
 Q: Create a list of items in HTML and use JavaScript to add a new item to the list when a button is clicked.
@@ -47,6 +41,7 @@ Q: Create a list of items in HTML and use JavaScript to add a new item to the li
 
 <button id="addButton">Add item</button>
 ```
+
 Answer:
 
 ```js
@@ -59,7 +54,7 @@ button.addEventListener("click", () => {
   newListItem.innerHTML = "Item " + counter;
   list.appendChild(newListItem);
   counter++;
-})
+});
 ```
 
 Q: Create a form in HTML with a text input and a submit button. Use JavaScript to display the value of the text input when the form is submitted.
@@ -71,24 +66,25 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
 </form>
 ```
 
-Answer: 
+Answer:
+
 ```js
 let form = document.getElementById("myForm");
 let textInput = document.getElementById("myInput");
 
 let container = document.createElement("div");
-document.body.appendChild(container)
+document.body.appendChild(container);
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    let p = document.createElement("p");
-    
-    p.innerHTML = textInput.value;
-    container.appendChild(p);
-    
-    textInput.value = "";
-})
+  let p = document.createElement("p");
+
+  p.innerHTML = textInput.value;
+  container.appendChild(p);
+
+  textInput.value = "";
+});
 ```
 
 ###### Medium:
