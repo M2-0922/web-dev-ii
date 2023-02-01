@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.6/axios.min.js"
+      integrity="sha512-RUkwGPgBmjCwqXpCRzpPPmGl0LSFp9v5wXtmG41+OS8vnmXybQX5qiG5adrIhtO03irWCXl+z0Jrst6qeaLDtQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Joke App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Joke app</h1>
+    </header>
+    <main>
+      <div>
+        <div>
+          <img src="./assets/joker.jpeg" alt="joke" />
+          <p id="joke-setup"></p>
+          <p id="joke-punchline"></p>
+          <p>Click the button below to generate a joke</p>
+        </div>
+
+        <div id="joke-container"></div>
+        <button id="gene-button" type="button">Generate</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
