@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>News</h1>
+        <!-- make some option list on right side -->
+        <div class="options">
+            <select name="category" id="category">
+                <option value="general">General</option>
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+            </select>
+            <!-- put language buttons and use flags to change language -->
+            <div class="language">
+                <button class="language-btn" id="en">EN</button>
+                <button class="language-btn" id="es">ES</button>
+            </div>
+        </div>
+
+    </header>
+    <div class="news-container">
+        <!-- <div class="news-card">
+          <h3 class="news-title"></h3>
+          <p class="news-description"></p>
+          <a class="news-link" href="#">Read More</a>
+        </div> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
