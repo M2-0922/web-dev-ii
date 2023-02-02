@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function greetings(){
+            console.log("heyyo")
+        }
+
+        window.addEventListener("load", () => {
+            //alert("Window object loaded")
+            let form = document.getElementById("myForm");
+            let textInput = document.getElementById("myInput");
+
+            let container = document.createElement("div");
+            document.body.appendChild(container)
+
+            form.addEventListener("submit", (event) => {
+                console.log(event);
+                event.preventDefault();
+
+                //let p = document.createElement("p");
+                
+                //p.innerHTML = textInput.value;
+                //container.appendChild(p);
+                
+                //textInput.value = "";
+            })
+
+            let button = document.getElementById("myButton");
+            
+            button.addEventListener("mouseover", (event) => {
+                console.log("Mouseover")
+            })
+
+            textInput.addEventListener("keydown", (event) => {
+                let val = event.target.value;
+                if(val.length > 3){
+                    console.log(val)
+                }
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="myInput">
+        <input type="submit" value="Submit">
+    </form>
+
+    <button id="myButton">Click me</button>
+    <p></p>
+</body>
+</html>
