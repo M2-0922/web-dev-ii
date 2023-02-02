@@ -12,10 +12,9 @@ ES6, In short of ECMAScript 6, is a latest version of Javascript standard, which
  - Arrow Function
  - classes
 
-
 ###### 3- What is the difference between let and const?
 
-let can be re-asigned, but only in the block scope situation.
+let is a variable can be re-asigned. But it can be used in only the block scope situation.
 const is the variable that cannot be re-asigned.
 
 ###### 4- How do you access object values? Give 3 examples
@@ -31,7 +30,8 @@ const is the variable that cannot be re-asigned.
 
 ###### 5- What does setInterval and setTimeout do?
 
-These are the JS methods that allow users to set the interval and timeout, from the triggered time by users.
+setInterval : Set a delay from the triggered time. Uses milliseconds
+setTimeout : Set a timer to time-out. It would excute only once. Uses milliseconds
 
 ###### 6- What are promises?
 
@@ -65,12 +65,12 @@ greeting = (firstname, lastname) => {
 
 ###### 9- Explain what a callback function is.
 
-Callback function is a type of functions that passes to another function as argment.
+Callback function is a type of functions that passes it to inside of another function, as argment.
 
 ###### 10- What does the functions pop and push do to an array?
 
 Push : Used to add an element to the end of an array.
-Pop : Used to delete the last element/item of the array
+Pop : Used to delete the last element/item of the array.
 
 ###### 11- What is the expected answer to this code?
 
