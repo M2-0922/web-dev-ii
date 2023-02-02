@@ -4,11 +4,30 @@ Q: How do you select an element with the id "my-element" using JavaScript?
 Q: Create a button in HTML and use JavaScript to change its text when it is clicked.
 
 ```js
-<button id="myButton">Click me</button>;
-const btn = document.querySelector("#myButton");
-btn.addEventListener("click", () => {
-  btn.textContent = "change!";
+<button id="myButton">Click me</button>
+```
+
+Answer:
+
+```js
+// first way (event listener way)
+let button = document.getElementById("myButton");
+
+button.addEventListener("click", function () {
+  button.innerHTML = "Clicked!";
 });
+
+// second way, function way
+
+function clickAndChange() {
+  let button = document.getElementById("myButton");
+  button.innerHTML = "Clicked!";
+}
+
+// html
+<button onClick="clickAndChange()" id="myButton">
+  Click me
+</button>;
 ```
 
 Q: Create a list of items in HTML and use JavaScript to add a new item to the list when a button is clicked.
@@ -21,15 +40,21 @@ Q: Create a list of items in HTML and use JavaScript to add a new item to the li
 </ul>
 
 <button id="addButton">Add item</button>
+```
 
-const item =document.querySelector("#myList");
-const btn =document.querySelector("#addButton");
-btn.addEventListener('click',()=>{
-  let li = document.createElement('li');
-  i.innerHTML = 'New Item';
-  item.appendChild(li);
-})
+Answer:
 
+```js
+let list = document.getElementById("myList");
+let button = document.getElementById("addButton");
+let counter = 4;
+
+button.addEventListener("click", () => {
+  let newListItem = document.createElement("li");
+  newListItem.innerHTML = "Item " + counter;
+  list.appendChild(newListItem);
+  counter++;
+});
 ```
 
 Q: Create a form in HTML with a text input and a submit button. Use JavaScript to display the value of the text input when the form is submitted.
@@ -39,6 +64,27 @@ Q: Create a form in HTML with a text input and a submit button. Use JavaScript t
   <input type="text" id="myInput">
   <input type="submit" value="Submit">
 </form>
+```
+
+Answer:
+
+```js
+let form = document.getElementById("myForm");
+let textInput = document.getElementById("myInput");
+
+let container = document.createElement("div");
+document.body.appendChild(container);
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let p = document.createElement("p");
+
+  p.innerHTML = textInput.value;
+  container.appendChild(p);
+
+  textInput.value = "";
+});
 ```
 
 ###### Medium:
