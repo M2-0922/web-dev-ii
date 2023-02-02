@@ -80,7 +80,7 @@ console.log(string);
 
 ###### 12- What data type would Array.map() and Array.filter() return?
 
-String
+Array
 
 ###### 13- What data type would Array.includes() and Array.some() return?
 
