@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        async function getJoke() {
+          const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+          const joke = await response.json();
+          const setup = joke.setup;
+          const punchline = joke.punchline;
+          
+          document.getElementById("setup").innerHTML = setup;
+          document.getElementById("punchline").innerHTML = punchline;
+        }
+      </script>
+    <title>Document</title>
+</head>
+
+
+  
+  <body onload="getJoke()">
+    <h2>Joke of the day:</h2>
+    <p id="setup"></p>
+    <p id="punchline"></p>
+  </body>
+
+
+
+</html>
