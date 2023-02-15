@@ -8,9 +8,12 @@ function makeLine(length) {
 }
 
 const buildTriangle = (num) => {
+  let triangle = "";
   for (let i = 1; i <= num; i++) {
-    console.log(makeLine(i));
+    triangle += makeLine(i);
   }
+
+  return triangle;
 };
 
 console.log(buildTriangle(10));
