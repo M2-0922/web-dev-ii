@@ -1,0 +1,97 @@
+$primary-color: #333;
+$secondary-color: #666;
+$input-padding: 10px 20px;
+$input-border-radius: 6px;
+$image-width: 25%;
+$image-height: 200px;
+$image-margin: 20px;
+$transition-duration: 0.4s;
+
+@mixin button-style{
+    font-size: 16px;
+    font-weight: bold;
+    padding: $input-padding;
+    border: none;
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+
+    color: white;
+    background-color: $primary-color;
+    cursor: pointer;
+    &:hover{
+        background-color: $secondary-color;
+    }
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 70%;
+    input{
+        padding: $input-padding;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border: 1px solid $primary-color;
+        border-top-left-radius: $input-border-radius;
+        border-bottom-left-radius: $input-border-radius;
+        font-size: 16px;
+        width: 50%;
+        height: 38.5px;
+    }
+    button{
+        @include button-style;
+    }
+}
+
+.image-container{
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .image{
+        width: $image-width;
+        height: $image-height;
+        background-size: cover;
+        background-position: center;
+        margin: $image-margin;
+
+        transition: transform $transition-duration;
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-content{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: tranform $transition-duration;
+
+    // transform: scale(0.5);
+
+    #full-size{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #close-button{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        @include button-style;
+    }
+}
