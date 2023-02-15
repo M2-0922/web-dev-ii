@@ -16,7 +16,7 @@
         </ul>
         <button id="addButton">Add item</button>
     const list = document.getElementById("myList");
-    const button = document.getElementById("addButton");
+    const button = document.getElementById("addButton");git m
     const newItem = document.createElement("li");
     button.addEventListener('click', function() {
         document.list.appendChild(newItem);
