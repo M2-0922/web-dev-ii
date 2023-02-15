@@ -1,9 +1,11 @@
 // write your solution here
 
-function factrial(n) {
+function factorialize(number) {
     let j = 1;
-    for(let i = 1; i <= n; i++) {
+    for(let i = 1; i <= number; i++) {
         j = j * i;
-        return j;
     }
+    return j;
 }
+
+factorialize(12); // 479001600
