@@ -1,4 +1,4 @@
-const key = "14951209-61b2f6019e4d1a85e007275aa";
+const key = "api-key-here";
 const model = new Model();
 let type = "image";
 let page = 1;
