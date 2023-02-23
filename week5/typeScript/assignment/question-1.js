@@ -28,10 +28,10 @@ function isEven(num) {
 }
 console.log(isEven(7));
 //7- Declare a function `removeDuplicates` that takes an array of numbers as an argument and returns an array with the duplicates removed.
-// function removeDuplicates(numbers: number[]): number[] {
-// 	return Array.from(new Set(numbers));
-// }
-// console.log(removeDuplicates([1, 1, 2, 2, 3, 3, 4, 5]));
+function removeDuplicates(numbers) {
+    return Array.from(new Set(numbers));
+}
+console.log(removeDuplicates([1, 1, 2, 2, 3, 3, 4, 5]));
 //8- Declare a variable `myBoolean` with the value true or false, depending on whether 5 is greater than 2.
 var myBoolean;
 5 > 2 ? (myBoolean = true) : (myBoolean = false);
