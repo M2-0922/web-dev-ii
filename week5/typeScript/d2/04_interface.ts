@@ -7,8 +7,12 @@ interface User {
     getCoupon(couponName: string, value: number): number
 }
 
+interface User {
+    githubId?: string
+}
+
 interface Admin extends User {
-    role: "admin" | "ta" | "learner",
+    role: "admin" | "superuser" | "mod",
 }
 
 let user: Admin = 
