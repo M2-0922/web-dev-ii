@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
-    <title>Search</title>
+    <title>Favorite</title>
   </head>
   <body>
     <header>
@@ -41,54 +41,9 @@
       <!-- search bar which will create the request -->
     </header>
     <main>
-      <div class="input-group mb-3 container pt-5">
-        <input
-          type="text"
-          class="form-control"
-          id="search-input"
-          placeholder="Write a keyword to discover"
-          aria-label="Write a keyword to discover"
-          aria-describedby="search-btn"
-        />
-        <button class="btn btn-dark" type="button" id="search-btn">
-          Discover
-        </button>
-      </div>
-
-      <div class="container text-center">
-        <div
-          class="btn-group"
-          role="group"
-          aria-label="Basic radio toggle button group"
-        >
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="btnradio1"
-            value="image"
-            autocomplete="off"
-            checked
-          />
-          <label class="btn btn-outline-dark" for="btnradio1">Images</label>
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="btnradio3"
-            value="videos"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-dark" for="btnradio3">Videos</label>
-        </div>
-      </div>
-
-      <div class="container">
+      <div class="container py-5">
+        <h2 class="text-md-start text-center">Favorite</h2>
         <div class="photo-grid row" id="photo-grid-id"></div>
-        <button id="show-more-btn" class="btn btn-dark d-block mx-auto">
-          See more
-        </button>
       </div>
     </main>
     <footer></footer>
@@ -100,6 +55,6 @@
     ></script>
     <script src="./assets/js/api.js"></script>
     <script src="./assets/js/model.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/fav.js"></script>
   </body>
 </html>
