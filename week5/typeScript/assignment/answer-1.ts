@@ -86,6 +86,7 @@ console.log(removeDuplicates([1]));
 console.log("\nQ8.----------------------");
 
 let myBoolean: boolean = 5 > 2;
+console.log(myBoolean);
 
 
 // 9- Declare a function `capitalizeString` that takes a string as an argument and returns the string with the first letter capitalized.
