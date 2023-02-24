@@ -92,7 +92,7 @@ console.log(myBoolean);
 // 9- Declare a function `capitalizeString` that takes a string as an argument and returns the string with the first letter capitalized.
 console.log("\nQ9.----------------------");
 
-function capitalizeString(str){
+function capitalizeString(str: string){
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 console.log(capitalizeString("vancouver"));
