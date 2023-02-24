@@ -7,7 +7,7 @@ console.log(myString);
 /*
 2- Declare a function `multiplyNumbers` that takes two numbers as arguments and returns their product.
 */
-const multiplyNumbers = function (a: number, b: number) {
+const multiplyNumbers = function (a: number, b: number): number {
   return a * b;
 };
 console.log(multiplyNumbers(3, 4));
@@ -21,7 +21,7 @@ console.log(myArray);
 /*
 4- Declare a function `reverseString` that takes a string as an argument and returns the reverse of the string.
 */
-const reverseString = function (str: string) {
+const reverseString = function (str: string): string {
   return str.split("").reverse().join("");
 };
 console.log(reverseString("hello"));
@@ -40,13 +40,13 @@ console.log(user);
 /*
 6- Declare a function `isEven` that takes a number as an argument and returns true if the number is even, and false otherwise.
 */
-const isEven = (num: number) => (num % 2 === 0 ? true : false);
+const isEven = (num: number): boolean => (num % 2 === 0 ? true : false);
 console.log(isEven(4));
 
 /*
 7- Declare a function `removeDuplicates` that takes an array of numbers as an argument and returns an array with the duplicates removed.
 */
-const removeDuplicates = function (numArr: number[]) {
+const removeDuplicates = function (numArr: number[]): number[] {
   let uniqueNums: number[] = [];
 
   for (let i = 0; i < numArr.length; i++) {
@@ -62,7 +62,7 @@ const removeDuplicates = function (numArr: number[]) {
   }
   return uniqueNums;
 };
-console.log(removeDuplicates([1, 1, 2, 3, 3]));
+console.log(removeDuplicates([1, 1, 2, 3, 3, 4, 5, 5, 1]));
 
 /*
 8- Declare a variable `myBoolean` with the value true or false, depending on whether 5 is greater than 2.
@@ -73,7 +73,7 @@ console.log(myBoolean);
 /*
 9- Declare a function `capitalizeString` that takes a string as an argument and returns the string with the first letter capitalized.
 */
-const capitalizeString = function (str: string) {
+const capitalizeString = function (str: string): string {
   const strs: string[] = str.split(" ");
   const upper: string[] = [];
 
